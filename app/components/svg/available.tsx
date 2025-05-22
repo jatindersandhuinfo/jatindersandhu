@@ -1,4 +1,4 @@
-import { IconProps } from '../../lib/type/icon';
+import type { IconProps } from '@/lib/type/icon';
 
 const AvailableSvg = ({ fill }: IconProps) => {
     return (

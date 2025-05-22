@@ -1,6 +1,6 @@
-import { ButtonProps } from '../../lib/type/button';
+import { ButtonProps } from '@/lib/type/button';
 
-const YoutubeSvg = ({ fill, width, title, icon, height, style }: ButtonProps) => {
+const YoutubeSvg = ({  width,  height, style }: ButtonProps) => {
     return (
         <button style={style} className={`w-[${width ?? '220px'}] h-[${height ?? '40px'}]   `}>
 

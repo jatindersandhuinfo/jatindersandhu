@@ -1,4 +1,4 @@
-import { IconProps } from '../../lib/type/icon';
+import type { IconProps } from '@/lib/type/icon';
 
 const FbSvg = ({ fill }: IconProps) => {
     return (
@@ -8,7 +8,7 @@ const FbSvg = ({ fill }: IconProps) => {
             </g>
             <defs>
                 <clipPath id="clip0_3_79">
-                    <rect width="14" height="14" fill="white" />
+                    <rect width="14" height="14"  fill={fill ?? "white"} />
                 </clipPath>
             </defs>
         </svg>

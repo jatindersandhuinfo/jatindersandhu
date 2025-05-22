@@ -1,4 +1,4 @@
-import { IconProps } from '../../lib/type/icon';
+import type { IconProps } from '@/lib/type/icon';
 
 const DownloadSvg = ({ fill }: IconProps) => {
     return (
@@ -8,7 +8,7 @@ const DownloadSvg = ({ fill }: IconProps) => {
             </g>
             <defs>
                 <clipPath id="clip0_3_300">
-                    <rect width="14" height="16" fill="white" transform="translate(0 0.285645)" />
+                    <rect width="14" height="16" fill={fill ?? "white"} transform="translate(0 0.285645)" />
                 </clipPath>
             </defs>
         </svg>

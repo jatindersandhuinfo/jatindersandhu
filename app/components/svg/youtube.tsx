@@ -1,4 +1,4 @@
-import { IconProps } from '../../lib/type/icon';
+import type { IconProps } from '@/lib/type/icon';
 
 const YoutubeSvg = ({ fill }: IconProps) => {
     return (
@@ -8,7 +8,7 @@ const YoutubeSvg = ({ fill }: IconProps) => {
             </g>
             <defs>
                 <clipPath id="clip0_3_94">
-                    <rect width="14" height="14" fill="white" />
+                    <rect width="14" height="14"  fill={fill ?? "white"} />
                 </clipPath>
             </defs>
         </svg>
