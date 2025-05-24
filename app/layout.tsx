@@ -25,11 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="flex h-screen">
-          <Header children={children} />
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <div className="flex h-screen gap-4 bg-[var(--color-silver)]">
+          <Header>
+            {children}
+          </Header>
         </div>
       </body>
     </html>

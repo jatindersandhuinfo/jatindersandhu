@@ -1,9 +1,16 @@
 'use client';
 import Image from 'next/image';
+import ProgressBarSection from '@/app/components/common/progress-bar';
+import { languages, skills, personalInfo } from '@/lib/profileData';
+import Section from '@/app/components/common/section';
+import InfoRow from '@/app/components/common/infoRow';
+import Button from '@/app/components/button';
+import DownloadSvg from '@/app/components/svg/download';
+
 
 const ProfileCard = () => {
   return (
-    <div className="w-full max-w-sm mx-auto p-6 bg-white rounded-xl shadow-md text-center space-y-4">
+    <div className="w-full max-w-sm mx-auto p-6 bg-white text-center ">
       {/* Profile Picture */}
       <div className="relative w-32 h-32 mx-auto">
         <Image
@@ -32,86 +39,36 @@ const ProfileCard = () => {
 
       {/* Personal Info */}
       <div className="text-sm text-left space-y-2">
-        <InfoRow label="Age" value="24" />
-        <InfoRow label="Residence" value="BD" />
-        <InfoRow label="Freelance" value="Available" valueColor="text-green-500" />
-        <InfoRow label="Address" value="Dhaka, Bangladesh" />
+        {personalInfo.map(({ label, value, valueColor }, idx) => (
+          <InfoRow
+            key={idx}
+            label={label}
+            value={value}
+            valueColor={valueColor}
+          />
+        ))}
       </div>
 
       {/* Languages */}
       <Section title="Languages">
-        <Progress label="Bangla" value={100} />
-        <Progress label="English" value={80} />
-        <Progress label="Spanish" value={60} />
+        {languages.map(({ skill, percent }) => (
+          <ProgressBarSection key={skill} skill={skill} percent={percent} />
+        ))}
       </Section>
 
       {/* Skills */}
       <Section title="Skills">
-        <Progress label="Html" value={90} />
-        <Progress label="CSS" value={85} />
-        <Progress label="Js" value={80} />
-        <Progress label="PHP" value={75} />
-        <Progress label="WordPress" value={85} />
-      </Section>
-
-      {/* Extra Skills */}
-      <Section title="Extra Skills">
-        <ul className="space-y-2 text-left text-gray-600">
-          <li className="flex items-start gap-2">
-            <span className="text-yellow-500">▣</span> Bootstrap, Materialize
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-yellow-500">▣</span> Stylus, Sass, Less
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-yellow-500">▣</span> Gulp, Webpack, Grunt
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-yellow-500">▣</span> GIT Knowledge
-          </li>
-        </ul>
+        {skills.map(({ skill, percent }) => (
+          <ProgressBarSection key={skill} skill={skill} percent={percent} />
+        ))}
       </Section>
 
       {/* Download CV */}
-      <button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-4 mt-4 rounded-md flex items-center justify-center gap-2">
-        DOWNLOAD CV <span className="text-xl">⬇</span>
-      </button>
-    </div>
+      <a href="/jatinderCV.pdf" download>
+        <Button title="DOWNLOAD CV" icon={<DownloadSvg />} algin='right' />
+      </a>
+    </div >
   );
 };
-
-const InfoRow = ({
-  label,
-  value,
-  valueColor = '',
-}: {
-  label: string;
-  value: string;
-  valueColor?: string;
-}) => (
-  <div className="flex justify-between">
-    <span className="text-sm bg-yellow-400 px-2 rounded">{label}:</span>
-    <span className={`ml-2 ${valueColor}`}>{value}</span>
-  </div>
-);
-
-const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
-  <div className="mt-4">
-    <h3 className="text-lg font-semibold mb-2">{title}</h3>
-    {children}
-  </div>
-);
-
-const Progress = ({ label, value }: { label: string; value: number }) => (
-  <div className="mb-2">
-    <div className="flex justify-between mb-1 text-sm">
-      <span>{label}</span>
-      <span>{value}%</span>
-    </div>
-    <div className="w-full h-1 bg-yellow-200 rounded">
-      <div className="h-1 bg-yellow-500 rounded" style={{ width: `${value}%` }} />
-    </div>
-  </div>
-);
 
 export default ProfileCard;
