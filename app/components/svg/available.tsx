@@ -1,8 +1,8 @@
 import type { IconProps } from '@/lib/type/icon';
 
-const AvailableSvg = ({ fill }: IconProps) => {
+const AvailableSvg = ({ fill,className }: IconProps) => {
     return (
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg  className={className} width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_2_454)">
                 <circle cx="18" cy="14" r="8" fill={fill ?? "#7EB942"} />
             </g>

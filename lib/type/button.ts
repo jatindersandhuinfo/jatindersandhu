@@ -7,4 +7,5 @@ export type ButtonProps = {
   title?: string;
   icon?: ReactNode;
   style?: CSSProperties;
+  algin?: string;
 };

@@ -1,8 +1,8 @@
 import type { IconProps } from '@/lib/type/icon';
 
-const DesginSvg = ({ fill }: IconProps) => {
+const DesginSvg = ({ fill,className }: IconProps) => {
     return (
-        <svg width="74" height="74" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg  className={className} width="74" height="74" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M32.375 38.1562H41.625V40.4688H32.375V38.1562Z" fill={fill ?? "#2B2B2B"} />
             <path d="M35.8438 34.6875H38.1562V43.9375H35.8438V34.6875Z" fill={fill ?? "#2B2B2B"} />
             <path d="M65.9062 38.1562H68.2188V40.4688H65.9062V38.1562Z" fill={fill ?? "#2B2B2B"} />

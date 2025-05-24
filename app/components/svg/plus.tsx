@@ -1,9 +1,9 @@
 import type { IconProps } from '@/lib/type/icon';
 
-const PlusSvg = ({ fill }: IconProps) => {
+const PlusSvg = ({ fill,className }: IconProps) => {
     return (
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_2_913)">
+        <svg  className={className} width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_2_913)">
                 <path d="M23.8335 23.8334V10.8334H28.1668V23.8334H41.1668V28.1667H28.1668V41.1667H23.8335V28.1667H10.8335V23.8334H23.8335Z" fill="#2B2B2B" />
             </g>
             <defs>
