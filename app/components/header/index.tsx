@@ -16,7 +16,7 @@ const Header = ({ children }: HeaderProps) => {
             </aside>
 
             {/* Main Content */}
-            <main className="flex-2 p-6 bg-gray-100" style={{ width: 'calc(100% - 415px)' }}>
+            <main className="flex-2 px-6 bg-gray-100" style={{ width: 'calc(100% - 415px)' }}>
                 {children}
             </main>
 

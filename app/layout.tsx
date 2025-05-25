@@ -33,7 +33,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest"></link>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="flex h-screen gap-4 bg-[var(--color-silver)]">
+        <div className="flex min-h-svh bg-[var(--color-silver)]">
           <Header>
             {children}
           </Header>

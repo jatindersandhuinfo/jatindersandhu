@@ -1,14 +1,40 @@
+import { Banner } from '@/lib/profileData';
+import Button from '@/app/components/button';
+import RightArrowSvg from '../svg/rightArrow';
+import Image from 'next/image';
 const BannerSection = () => {
     return (
-        <div className="relative my-12 flex w-full flex-col items-center sm:mt-24">
-            <h1
-                className="mt-8 max-w-sm bg-gradient-to-br from-gray-500 via-teal-500 to-gray-500 bg-clip-text text-center text-4xl font-extrabold sm:max-w-4xl sm:text-6xl text-[#2B2B2B]">
-                I’m Jatinder Sandhu <span className=""> Full Stack</span> Developer
-            </h1>
-            <p>an experienced Full Stack Developer with 4+ years of experience in PHP, React, Node.js, Laravel, and WordPress. I have a great gift for construction. Our focus is on developing scalable web apps with good speed. I stay current with technology and adhere to industry standards in my delivery. I have gained experience with complicated web development projects, API connections, and responsive front-end designs.
+        <section className="flex flex-col md:flex-row items-center justify-between md:px-20 py-16 bg-white relative overflow-hidden">
+            {/* Text Content */}
+            <div className="md:w-1/2 z-10">
+                <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-balck-dark)] leading-tight">
+                    I&rsquo;m <span className="text-[var(--color-balck-dark)]">{Banner?.name}</span><br />
+                    <span className="text-[var(--color-yellow)]">{Banner?.role}</span>{" "}
+                    <span className="text-[var(--color-balck-dark)]">Developer</span>
+                </h1>
+                <p className="text-[var(--color-grey)] mt-6 text-lg">{Banner?.desc}</p>
+                <p className="text-[var(--color-grey)] mt-6 text-lg">{Banner?.descOne}</p>
 
-            </p>
-        </div>
+                <Button title='HIRE ME' icon={<RightArrowSvg />} />
+            </div>
+
+            {/* Image */}
+            <div className="md:w-1/2 mt-10 md:mt-0 relative z-10">
+                <Image
+                    src="/jatindersandhu.png"
+                    alt="jatinder sandhu"
+                    width={700}
+                    height={900}
+                    className="w-full max-w-md mx-auto scale-125"
+                />
+            </div>
+
+            {/* Background geometric shapes (optional with absolute positioning) */}
+            <div className="absolute top-6 left-6 w-4 h-4 border-2 border-[var(--color-yellow)] rounded-full"></div>
+            <div className="absolute bottom-6 left-6 w-4 h-4 border-2 border-[var(--color-green)] rounded-full"></div>
+            <div className="absolute top-12 right-20 rotate-45 w-4 h-4 border-2 border-[var(--color-yellow)]"></div>
+            <div className="absolute bottom-8 right-10 w-0 h-0 border-l-[6px] border-r-[6px] border-b-[10px] border-[var(--color-yellow)]"></div>
+        </section>
     )
 }
 export default BannerSection;

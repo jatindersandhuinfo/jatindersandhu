@@ -13,14 +13,14 @@ const ProfileCard = () => {
   return (
     <div className="w-full max-w-sm mx-auto p-6 bg-white text-center ~">
       {/* Profile Picture */}
-      <div className="relative w-32 h-32 mx-auto">
+      <div className="relative w-32 h-32 mx-auto bg-[var(--color-silver)] rounded-full">
         <Image
-          src="/profile.jpg" // Replace with your image path
+          src="/profile.png" // Replace with your image path
           alt="Profile"
           fill
           priority
-          sizes="128px"
-          className="object-cover rounded-full"
+          sizes="300px"
+          className="object-cover rounded-full "
         />
         <span className="absolute bottom-2 right-2 h-4 w-4 bg-green-500 border-2 border-white rounded-full" />
       </div>
