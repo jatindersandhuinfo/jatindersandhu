@@ -13,7 +13,9 @@
   --color-silver-light: #E4E6EB;
   --color-green: #7EB942;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

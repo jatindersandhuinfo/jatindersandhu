@@ -1,36 +1,20 @@
-// import { groupedExtraSkills } from "@/lib/data/profile";
-// import DoubleBox from "@/app/components/svg/doubleBox";
 import BannerSection from "@/app/components/sections/banner";
-import ServiceSection from "@/app/components/sections/service";
-import InfoSection from "@/app/components/sections/info";
+import { groupedExtraSkills } from "@/lib/data/skill";
+import DoubleBox from "@/app/components/svg/doubleBox";
+import Section from "@/app/components/common/section";
+import Skill from "@/app/components/card/skill";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center sm:items-start">
-      {/* Banner Section */}
-      <BannerSection />
-
-      {/* Services Section */}
-      <ServiceSection />
-
-      {/* Education & Work */}
-      <InfoSection />
-
-      {/* Extra Skills */}
-      {/* <Section title="Extra Skills">
-        {groupedExtraSkills.map((group, idx) => (
-          <div key={idx} className="flex flex-row flex-wrap gap-2">
-            <h4 className="font-semibold text-[var(--color-balck-dark)] mb-1 text-left">{group.title}: </h4>
-            <ul className="text-left text-[var(--color-balck-dark)] flex flex-row flex-wrap items-center gap-2">
-              {group.skills.map((skill, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <DoubleBox className="mt-1" /> {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </Section> */}
+    <div className="flex flex-col items-center sm:items-start gap-4 mb-4">
+      <BannerSection id="home" />
+      <div className="bg-white w-full flex flex-col items-center sm:items-start p-16">
+        <Section title="Extra Skills">
+          {groupedExtraSkills && groupedExtraSkills.map((title:string, idx:number) => (
+            <Skill key={idx} title={title} Icon={DoubleBox} />
+          ))}
+        </Section>
+      </div>
     </div>
   );
 }

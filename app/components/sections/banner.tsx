@@ -2,9 +2,9 @@ import { Banner } from '@/lib/data/banner';
 import Button from '@/app/components/button';
 import RightArrowSvg from '../svg/rightArrow';
 import Image from 'next/image';
-const BannerSection = () => {
+const BannerSection = ({ id }: { id: string }) => {
     return (
-        <section className="flex flex-col md:flex-row items-center justify-between md:px-20 py-16 bg-white relative overflow-hidden w-full">
+        <section id={id} className="flex flex-col md:flex-row items-center justify-between md:px-20 py-16 bg-white relative overflow-hidden w-full">
             {/* Text Content */}
             <div className="md:w-4/6 z-10">
                 <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-balck-dark)] leading-tight">
@@ -15,7 +15,7 @@ const BannerSection = () => {
                 <p className="text-[var(--color-grey)] mt-6 text-lg">{Banner?.desc}</p>
                 <p className="text-[var(--color-grey)] mt-6 text-lg">{Banner?.descOne}</p>
 
-                <Button width='130px' style={{ color : 'text-[var(--color-grey)]'}} title='HIRE ME' icon={<RightArrowSvg width='20px'  />} />
+                <Button width='130px' style={{ color: 'text-[var(--color-grey)]' }} title='HIRE ME' icon={<RightArrowSvg width='20px' />} />
             </div>
 
             {/* Image */}
@@ -25,6 +25,7 @@ const BannerSection = () => {
                     alt="jatinder sandhu"
                     width={700}
                     height={900}
+                    priority
                     className="w-full max-w-md mx-auto scale-125"
                 />
             </div>

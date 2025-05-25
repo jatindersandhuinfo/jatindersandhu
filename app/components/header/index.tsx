@@ -1,6 +1,5 @@
 import React from 'react';
 import RightMenu from "@/app/components/menu/right";
-import { menuItems } from '@/lib/menuitems';
 import ProfileCard from '@/app/components/card/profile';
 import ProgressBarSection from '@/app/components/common/progress-bar';
 import { languages, skills, personalInfo, profileDetail, social } from '@/lib/data/profile';
@@ -81,7 +80,7 @@ const Header = ({ children }: HeaderProps) => {
             <aside className="fixed w-[108px] right-0 bg-white h-full">
                 <div className="h-full flex flex-col items-center pt-20 pb-4">
                     <nav className="w-full px-4 mt-6 flex flex-col items-center justify-center gap-5">
-                        <RightMenu items={menuItems} />
+                        <RightMenu />
                     </nav>
                 </div>
             </aside>
