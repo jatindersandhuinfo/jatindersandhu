@@ -2,6 +2,7 @@
 // import DoubleBox from "@/app/components/svg/doubleBox";
 import BannerSection from "@/app/components/sections/banner";
 import ServiceSection from "@/app/components/sections/service";
+import InfoSection from "@/app/components/sections/info";
 
 const Home = () => {
   return (
@@ -11,6 +12,9 @@ const Home = () => {
 
       {/* Services Section */}
       <ServiceSection />
+
+      {/* Education & Work */}
+      <InfoSection />
 
       {/* Extra Skills */}
       {/* <Section title="Extra Skills">

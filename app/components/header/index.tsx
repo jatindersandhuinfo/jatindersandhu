@@ -9,6 +9,7 @@ import InfoRow from '@/app/components/common/infoRow';
 import Button from '@/app/components/button';
 import DownloadSvg from '@/app/components/svg/download';
 import Link from 'next/link';
+import BreakLine from '@/app/components/svg/brakline';
 
 type HeaderProps = {
     children: React.ReactNode;
@@ -22,13 +23,15 @@ const Header = ({ children }: HeaderProps) => {
                 <div className="w-full max-w-sm mx-auto p-6 bg-white text-center ~">
                     {/* Profile Picture */}
                     <ProfileCard />
-
+                    
                     {/* Social Icons */}
                     <div className="flex justify-center space-x-3 mb-4">
                         {social && social.map(({ link, Icon }, idx) => (
                             <Link key={idx} href={link} target='_blank'><Icon width={`18px`} height={`18px`} /></Link>
                         ))}
                     </div>
+
+                    <BreakLine width='270px'/>
 
                     {/* Personal Info */}
                     <div className="text-sm text-left space-y-2">
@@ -42,6 +45,8 @@ const Header = ({ children }: HeaderProps) => {
                         ))}
                     </div>
 
+                    <BreakLine width='270px'/>
+
                     {/* Languages */}
                     <Section title="Languages">
                         {languages && languages.map(({ skill, percent }, idx) => (
@@ -49,12 +54,16 @@ const Header = ({ children }: HeaderProps) => {
                         ))}
                     </Section>
 
+                    <BreakLine width='270px'/>
+
                     {/* Skills */}
                     <Section title="Skills">
                         {skills && skills.map(({ skill, percent }, idx) => (
                             <ProgressBarSection key={idx} skill={skill} percent={percent} />
                         ))}
                     </Section>
+
+                    <BreakLine width='270px'/>
 
                     {/* Download CV */}
                     <Link href={profileDetail?.cv && profileDetail?.cv} download>

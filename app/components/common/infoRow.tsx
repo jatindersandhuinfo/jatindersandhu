@@ -6,7 +6,7 @@ const InfoRow = ({
     valueColor = '',
 }: InfoRowProps) => (
     <div className="flex justify-between">
-        <span className="text-sm bg-yellow-400 px-2 rounded">{label}:</span>
+        <span className="text-sm bg-[var(--color-yellow)] px-2 rounded">{label}:</span>
         <span className={`ml-2 ${valueColor}`}>{value}</span>
     </div>
 );
