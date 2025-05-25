@@ -67,7 +67,7 @@ const Header = ({ children }: HeaderProps) => {
 
                     {/* Download CV */}
                     <Link href={profileDetail?.cv && profileDetail?.cv} download>
-                        <Button title="DOWNLOAD CV" icon={<DownloadSvg />} algin='right' />
+                        <Button title="DOWNLOAD CV" icon={<DownloadSvg className='fill-[var(--color-black-dark)]' fill={`var(--color-black-dark)`} />} algin='right' />
                     </Link>
                 </div>
             </aside>
