@@ -1,8 +1,7 @@
 import type { InfoProps } from '@/lib/type/info';
 
 const InfoCard = ({ type, title, date, subtitle, desc }: InfoProps) => {
-  console.log("type",type);
-  
+
   return (
     <>
       <div className="flex w-full border-b py-10 border-[var(--color-silver)] last:border-b-0" >
