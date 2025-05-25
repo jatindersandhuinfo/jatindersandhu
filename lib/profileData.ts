@@ -6,6 +6,7 @@ import MailSvg from '@/app/components/svg/mail';
 export const profileDetail = {
     name: 'Jatinder Sandhu',
     role: 'Full-Stack Devloper',
+    desc: "I'm Jatinder Sandhu, an experienced Full Stack Developer with 4+ years of experience in PHP, React, Node.js, Laravel, and WordPress. I have a great gift for construction. Our focus is on developing scalable web apps with good speed. I stay current with technology and adhere to industry standards in my delivery. I have gained experience with complicated web development projects, API connections, and responsive front-end designs.",
     cv: '/jatinderCV.pdf'
 };
 
