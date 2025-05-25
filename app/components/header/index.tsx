@@ -11,7 +11,7 @@ const Header = ({ children }: HeaderProps) => {
     return (
         <>
             {/* Left Sidebar */}
-            <aside className="w-[305px] flex-1 bg-white border-r border-gray-200">
+            <aside className="w-[305px] flex-1 bg-white sticky">
                 <ProfileCard />
             </aside>
 
@@ -21,8 +21,8 @@ const Header = ({ children }: HeaderProps) => {
             </main>
 
             {/* Right Sidebar */}
-            <aside className="w-[108px] flex-3 bg-white border-l border-gray-200">
-                <div className="h-full flex flex-col items-center py-4">
+            <aside className="w-[108px] flex-3 bg-white sticky">
+                <div className="h-full flex flex-col items-center pt-20 pb-4">
                     <nav className="w-full px-4 mt-6 flex flex-col items-center justify-center gap-5">
                         <RightMenu items={menuItems} />
                     </nav>

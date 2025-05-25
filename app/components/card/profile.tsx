@@ -6,11 +6,13 @@ import Section from '@/app/components/common/section';
 import InfoRow from '@/app/components/common/infoRow';
 import Button from '@/app/components/button';
 import DownloadSvg from '@/app/components/svg/download';
+import LinkedSvg from '../svg/linked';
+import MailSvg from '../svg/mail';
 
 
 const ProfileCard = () => {
   return (
-    <div className="w-full max-w-sm mx-auto p-6 bg-white text-center ">
+  <div className="w-full max-w-sm mx-auto p-6 bg-white text-center ~">
       {/* Profile Picture */}
       <div className="relative w-32 h-32 mx-auto">
         <Image
@@ -28,14 +30,10 @@ const ProfileCard = () => {
       <p className="text-gray-500">Font-End Developer</p>
 
       {/* Social Icons */}
-      {/* <div className="flex justify-center space-x-3 text-yellow-500">
-        <FaFacebookF />
-        <FaInstagram />
-        <FaTwitter />
-        <FaLinkedinIn />
-        <FaGithub />
-        <FaYoutube />
-      </div> */}
+     <div className="flex justify-center space-x-3 text-yellow-500">
+        <LinkedSvg />
+        <MailSvg/>
+      </div>
 
       {/* Personal Info */}
       <div className="text-sm text-left space-y-2">

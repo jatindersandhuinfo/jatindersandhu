@@ -4,7 +4,7 @@ import DoubleBox from "./components/svg/doubleBox";
 
 export default function Home() {
   return (
-    <div className="min-h-screen pb-20 gap-16 ">
+    <div className="gap-16 ">
       <main className="flex flex-col items-center sm:items-start">
         {/* Extra Skills */}
         <Section title="Extra Skills">

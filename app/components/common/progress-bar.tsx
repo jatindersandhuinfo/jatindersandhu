@@ -8,7 +8,7 @@ const ProgressBarSection = ({ skill, percent }: ProgressProps) => {
                 <p className="text-[var(--color-grey)]">{skill}</p>
                 <p className="text-[var(--color-grey)]">{percent}%</p>
             </div>
-            <ProgressBarSvg width={`222px`} />
+            <ProgressBarSvg width={`${percent}%`} />
         </div>
     )
 }
