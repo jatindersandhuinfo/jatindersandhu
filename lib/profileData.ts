@@ -1,3 +1,21 @@
+import Github from '@/app/components/svg/github';
+import LinkedSvg from '@/app/components/svg/linked';
+import MailSvg from '@/app/components/svg/mail';
+
+
+export const profileDetail = {
+    name: 'Jatinder Sandhu',
+    role: 'Full-Stack Devloper',
+    cv: '/jatinderCV.pdf'
+};
+
+
+export const social = [
+    { link: 'https://www.linkedin.com/in/jatindersandhuinfo/', Icon: LinkedSvg },
+    { link: 'jatinderinfo@gmail.com', Icon: MailSvg },
+    { link: "https://github.com/jatindersandhuinfo", Icon: Github },
+];
+
 export const languages = [
     { skill: 'Punjabi', percent: '100' },
     { skill: 'Hindi', percent: '80' },

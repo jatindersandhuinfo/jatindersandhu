@@ -3,8 +3,7 @@
 @tailwind utilities;
 :root {
   --color-white: #ffffff;
-  --color-yello-dark: #FFB400;
-  --color-yello-light: #FFB400;
+  --color-yellow: #FFB400;
   --color-balck-dark: #18191A;
   --color-balck-medium: #242526;
   --color-balck-light: #2B2B2B;
