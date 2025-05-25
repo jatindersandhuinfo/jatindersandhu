@@ -1,13 +1,17 @@
-import Section from "@/app/components/common/section";
-import { groupedExtraSkills } from "@/lib/profileData";
+import { groupedExtraSkills } from "@/lib/data/profile";
 import DoubleBox from "@/app/components/svg/doubleBox";
 import BannerSection from "@/app/components/sections/banner";
+import ServiceSection from "@/app/components/sections/service";
 
 const Home = () => {
   return (
-    <main className="flex flex-col items-center sm:items-start">
+    <div className="flex flex-col items-center sm:items-start">
       {/* Banner Section */}
       <BannerSection />
+
+      {/* Services Section */}
+      <ServiceSection />
+
       {/* Extra Skills */}
       {/* <Section title="Extra Skills">
         {groupedExtraSkills.map((group, idx) => (
@@ -23,7 +27,7 @@ const Home = () => {
           </div>
         ))}
       </Section> */}
-    </main>
+    </div>
   );
 }
 export default Home; 

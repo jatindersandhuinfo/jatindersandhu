@@ -2,6 +2,13 @@ import React from 'react';
 import RightMenu from "@/app/components/menu/right";
 import { menuItems } from '@/lib/menuitems';
 import ProfileCard from '@/app/components/card/profile';
+import ProgressBarSection from '@/app/components/common/progress-bar';
+import { languages, skills, personalInfo, profileDetail, social } from '@/lib/data/profile';
+import Section from '@/app/components/common/section';
+import InfoRow from '@/app/components/common/infoRow';
+import Button from '@/app/components/button';
+import DownloadSvg from '@/app/components/svg/download';
+import Link from 'next/link';
 
 type HeaderProps = {
     children: React.ReactNode;
@@ -11,17 +18,58 @@ const Header = ({ children }: HeaderProps) => {
     return (
         <>
             {/* Left Sidebar */}
-            <aside className="w-[305px] flex-1 bg-white sticky">
-                <ProfileCard />
+            <aside className="fixed w-[305px] left-0 bg-white h-full">
+                <div className="w-full max-w-sm mx-auto p-6 bg-white text-center ~">
+                    {/* Profile Picture */}
+                    <ProfileCard />
+
+                    {/* Social Icons */}
+                    <div className="flex justify-center space-x-3 mb-4">
+                        {social && social.map(({ link, Icon }, idx) => (
+                            <Link key={idx} href={link} target='_blank'><Icon width={`18px`} height={`18px`} /></Link>
+                        ))}
+                    </div>
+
+                    {/* Personal Info */}
+                    <div className="text-sm text-left space-y-2">
+                        {personalInfo && personalInfo.map(({ label, value, valueColor }, idx) => (
+                            <InfoRow
+                                key={idx}
+                                label={label}
+                                value={value}
+                                valueColor={valueColor}
+                            />
+                        ))}
+                    </div>
+
+                    {/* Languages */}
+                    <Section title="Languages">
+                        {languages && languages.map(({ skill, percent }, idx) => (
+                            <ProgressBarSection key={idx} skill={skill} percent={percent} />
+                        ))}
+                    </Section>
+
+                    {/* Skills */}
+                    <Section title="Skills">
+                        {skills && skills.map(({ skill, percent }, idx) => (
+                            <ProgressBarSection key={idx} skill={skill} percent={percent} />
+                        ))}
+                    </Section>
+
+                    {/* Download CV */}
+                    <Link href={profileDetail?.cv && profileDetail?.cv} download>
+                        <Button title="DOWNLOAD CV" icon={<DownloadSvg />} algin='right' />
+                    </Link>
+                </div>
             </aside>
 
             {/* Main Content */}
-            <main className="flex-2 px-6 bg-gray-100" style={{ width: 'calc(100% - 415px)' }}>
+            <main className="relative left-[305px] flex-2 px-6 bg-gray-100" style={{ width: 'calc(100% - 415px)' }}>
                 {children}
             </main>
 
             {/* Right Sidebar */}
-            <aside className="w-[108px] flex-3 bg-white sticky">
+            <aside className="fixed w-[108px] right-0 bg-white h-full">
                 <div className="h-full flex flex-col items-center pt-20 pb-4">
                     <nav className="w-full px-4 mt-6 flex flex-col items-center justify-center gap-5">
                         <RightMenu items={menuItems} />
