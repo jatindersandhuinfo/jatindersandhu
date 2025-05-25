@@ -1,5 +1,5 @@
-import { groupedExtraSkills } from "@/lib/data/profile";
-import DoubleBox from "@/app/components/svg/doubleBox";
+// import { groupedExtraSkills } from "@/lib/data/profile";
+// import DoubleBox from "@/app/components/svg/doubleBox";
 import BannerSection from "@/app/components/sections/banner";
 import ServiceSection from "@/app/components/sections/service";
 
