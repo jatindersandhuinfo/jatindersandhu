@@ -3,8 +3,9 @@ import ServiceSection from "./components/sections/service";
 import EducationSection from "./components/sections/education";
 import SkillSection from "./components/sections/skill";
 import WorkSection from "./components/sections/work";
-import Footer from "@/app/components/footer";
 import Portfolio from "@/app/components/sections/portfolio";
+import Contact from "@/app/components/sections/contact";
+import Footer from "@/app/components/footer";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <EducationSection id="speaking" />
       <WorkSection id="work" />
       <Portfolio id="portfolio" />
+      <Contact id="contact" />
       <Footer />
     </div>
   );

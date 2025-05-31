@@ -22,7 +22,7 @@ const RightMenu = () => {
                     onSetActive={() => setPathname(link)}
                     className={`w-10 h-10 rounded-full flex justify-center items-center transition-all duration-300 ${isActive(link) ? 'bg-[var(--color-yellow)]' : 'bg-[var(--color-silver)]'} hover:bg-[var(--color-yellow)]`}                >
                     <Icon
-                        className={`w-4 h-4 hover:fill-[var(--color-black-light)] `}
+                        className={`w-4 h-4 fill-[var(--color-grey)] hover:fill-[var(--color-black-light)] `}
                         title={name}
                         fill={`${isActive(link)
                             ? '#18191A'
