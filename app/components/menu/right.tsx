@@ -7,10 +7,6 @@ import { Link } from "react-scroll/modules";
 const RightMenu = () => {
     const [pathname, setPathname] = useState<string | null>('/');
 
-    const handleClick = (link: string | null) => {
-        setPathname(link);
-    };
-
     return (
         menuItems && menuItems.map(({ name, link, icon: Icon }) => {
             const isActive = (link: string | null) => pathname === link;

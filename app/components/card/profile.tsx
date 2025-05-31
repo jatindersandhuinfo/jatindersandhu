@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { profileDetail } from '@/lib/data/profile';
 
 const ProfileCard = () => {
