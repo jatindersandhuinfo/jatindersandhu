@@ -1,13 +1,13 @@
 import type { SkillProps } from '@/lib/type/skill';
 
-const Skill = ({ title, Icon, color }: SkillProps) => {
+const Skill = ({ name, Icon, color }: SkillProps) => {
   return (
     <div
-      className="flex items-center gap-2 px-3 py-2 rounded-lg text-white"
+      className="flex flex-col justify-center items-center gap-2 p-5 rounded-lg text-white w-32 h-32"
       style={{ backgroundColor: color }}
     >
       <Icon className="text-xl" />
-      <span className="text-sm font-semibold">{title}</span>
+      <span className="text-sm font-semibold">{name}</span>
     </div>
   );
 };

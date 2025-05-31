@@ -1,29 +1,39 @@
 'use client';
 
+import { useState } from 'react';
 import { menuItems } from '@/lib/menuitems';
-import { usePathname } from 'next/navigation'
+import { Link } from "react-scroll/modules";
 
 const RightMenu = () => {
-      const pathname = usePathname();
+    const [pathname, setPathname] = useState<string | null>('/');
+
+    const handleClick = (link: string | null) => {
+        setPathname(link);
+    };
+
     return (
         menuItems && menuItems.map(({ name, link, icon: Icon }) => {
-            const isActive = pathname == link;
+            const isActive = (link: string | null) => pathname === link;
+
             return (
-                <a
+                <Link
                     key={name}
-                    href={link}
-                    className={`w-10 h-10 rounded-full flex justify-center items-center transition-all duration-300 ${isActive ? 'bg-[var(--color-yellow)]' : 'bg-[var(--color-silver)]'
-                        } hover:bg-[var(--color-yellow)]`}
-                >
+                    to={link}
+                    smooth={true}
+                    offset={-100}
+                    duration={300}
+                    spy={true}
+                    onSetActive={() => setPathname(link)}
+                    className={`w-10 h-10 rounded-full flex justify-center items-center transition-all duration-300 ${isActive(link) ? 'bg-[var(--color-yellow)]' : 'bg-[var(--color-silver)]'} hover:bg-[var(--color-yellow)]`}                >
                     <Icon
                         className={`w-4 h-4 hover:fill-[var(--color-black-light)] `}
                         title={name}
-                        fill={`${isActive
+                        fill={`${isActive(link)
                             ? '#18191A'
                             : '#767676'
                             }`}
                     />
-                </a>
+                </Link>
             );
         })
     )
