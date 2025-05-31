@@ -4,6 +4,7 @@ import EducationSection from "./components/sections/education";
 import SkillSection from "./components/sections/skill";
 import WorkSection from "./components/sections/work";
 import Footer from "@/app/components/footer";
+import Portfolio from "@/app/components/sections/portfolio";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <SkillSection id="skill" />
       <EducationSection id="speaking" />
       <WorkSection id="work" />
+      <Portfolio id="portfolio" />
       <Footer />
     </div>
   );
