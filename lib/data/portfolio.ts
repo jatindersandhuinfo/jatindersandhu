@@ -1,48 +1,64 @@
 import type { Project } from "@/lib/type/portfolio";
 
-export const filters = ["All", "Web Design", "App Development", "Branding"];
+export const filters = [
+  "All",
+  "Next.js",
+  "React.js",
+  "Node.js",
+  "PHP",
+  "WordPress",
+  "Tailwind CSS",
+  "MongoDB"
+];
 
 export const projects: Project[] = [
   {
     id: "1",
-    href: "/project-1",
-    image: "https://spacema-dev.com/elevate/assets/images/portfolio-1.png",
-    title: "Awesome Project 1",
-    category: "App development",
+    href: "https://dairy.malwaland.in/",
+    image: "/sandhuDairy1.png",
+    title: "Sandhu Dairy",
+    category: "Next.JS, React.js, MongoDB, Tailwind CSS",
   },
   {
     id: "2",
-    href: "/project-2",
-    image: "https://spacema-dev.com/elevate/assets/images/portfolio-2.png",
-    title: "Awesome Project 2",
-    category: "Branding",
+    href: "https://luxorlimo.ca/",
+    image: "/luxor_limo.png",
+    title: "Luxorlimo Rental Service",
+    category: "Wordpress,Elementor,Woocommerce"
   },
   {
     id: "3",
-    href: "/project-3",
-    image: "https://spacema-dev.com/elevate/assets/images/portfolio-3.png",
-    title: "Awesome Project 3",
-    category: "Web Design, Branding",
+    href: "https://invictusfreight.com",
+    image: "/invictus_freight1.png",
+    title: "InvictusFreight",
+    category: "Wordpress,Elementor,Woocommerce"
   },
   {
     id: "4",
-    href: "/project-4",
-    image: "https://spacema-dev.com/elevate/assets/images/portfolio-4.png",
-    title: "Awesome Project 4",
-    category: "Web Design, Branding",
+    href: "https://lunanav.malwaland.in/",
+    image: "/lunanav1.png",
+    title: "Luna By Navneet & Navjot",
+    category: "Wordpress,Elementor,Woocommerce"
   },
   {
     id: "5",
-    href: "/project-5",
-    image: "https://spacema-dev.com/elevate/assets/images/portfolio-5.png",
-    title: "Awesome Project 5",
-    category: "Web Design, Branding",
+    href: "https://weddingpagdiwale.com/",
+    image: "/weeding.png",
+    title: "Wedding Pagdi Wale",
+    category: "Wordpress,Elementor,Woocommerce"
   },
   {
     id: "6",
-    href: "/project-6",
-    image: "https://spacema-dev.com/elevate/assets/images/portfolio-6.png",
-    title: "Awesome Project 6",
-    category: "Web Design, Branding",
+    href: "/",
+    image: "/SandhuCementStore.png",
+    title: "Admin Sandhu Cement Store",
+    category: "Node.JS, React.js, MySQl, Tailwind CSS"
+  },
+  {
+    id: "7",
+    href: "/",
+    image: "/trueholidayAdmin.png",
+    title: "Admin True Holiday",
+    category: "PHP, MySQl, Bootstrap"
   },
 ];

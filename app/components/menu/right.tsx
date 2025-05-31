@@ -16,7 +16,7 @@ const RightMenu = () => {
                     key={name}
                     to={link}
                     smooth={true}
-                    offset={-100}
+                    offset={-50}
                     duration={300}
                     spy={true}
                     onSetActive={() => setPathname(link)}

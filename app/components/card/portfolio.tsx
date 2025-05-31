@@ -25,7 +25,7 @@ const PortfolioCard = ({ projects }: Props) => {
                 {filteredProjects.map(({ id, href, image, title, category }) => (
                     <div
                         key={id}
-                        className="group portfolio-item relative hover:shadow-lg shadow-md rounded-lg overflow-hidden"
+                        className="group portfolio-item relative hover:shadow-2xl shadow-md rounded-lg overflow-hidden"
                     >
                         <a href={href}>
                             <img
@@ -34,12 +34,12 @@ const PortfolioCard = ({ projects }: Props) => {
                                 alt={title}
                                 loading="lazy"
                             />
-                            <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-indigo-500 to-pink-500 opacity-0 transition duration-300 ease-in-out group-hover:opacity-70"></div>
+                            <div className="absolute top-0 left-0 right-0 bottom-0 opacity-0 transition duration-300 ease-in-out hover:opacity-70"></div>
                             <div className="p-4 flex flex-col items-center justify-between relative z-10">
-                                <h3 className="text-lg font-medium text-txt group-hover:text-gray-dark">
+                                <h3 className="text-lg font-bold text-txt group-hover:text-[var(--color-balck-dark)]">
                                     {title}
                                 </h3>
-                                <span className="text-sm font-bold text-pink-500 group-hover:text-indigo-500">
+                                <span className="text-sm font-normal text-[var(--color-balck-dark)]">
                                     {category}
                                 </span>
                             </div>
