@@ -4,16 +4,16 @@ import RightArrowSvg from '../svg/rightArrow';
 import Image from 'next/image';
 const BannerSection = ({ id }: { id: string }) => {
     return (
-        <section id={id} className="flex flex-col md:flex-row items-center justify-between md:pl-20 pt-16 bg-white relative overflow-hidden w-full">
+        <section id={id} className="flex flex-col md:flex-row items-center justify-between lg:pl-20 pt-16 px-4 sm:p-0 md:px-10 md:py-20 bg-white relative overflow-hidden w-full">
             {/* Text Content */}
             <div className="md:w-3/5 z-10">
-                <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-balck-dark)] leading-tight">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[var(--color-balck-dark)] leading-tight">
                     I&rsquo;m <span className="text-[var(--color-balck-dark)]">{Banner?.name}</span><br />
                     <span className="text-[var(--color-yellow)]">{Banner?.role}</span>{" "}
                     <span className="text-[var(--color-balck-dark)]">Developer</span>
                 </h1>
-                <p className="text-[var(--color-grey)] mt-6 text-lg">{Banner?.desc}</p>
-                <p className="text-[var(--color-grey)] mt-6 text-lg mb-2">{Banner?.descOne}</p>
+                <p className="text-[var(--color-grey)] mt-6 text-base sm:text-lg">{Banner?.desc}</p>
+                <p className="text-[var(--color-grey)] mt-6 text-base sm:text-lg mb-2">{Banner?.descOne}</p>
 
                 <Button width='130px' style={{ color: 'text-[var(--color-grey)]' }} title='HIRE ME' icon={<RightArrowSvg width='20px' />} />
             </div>

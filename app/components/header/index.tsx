@@ -18,8 +18,8 @@ const Header = ({ children }: HeaderProps) => {
     return (
         <>
             {/* Left Sidebar */}
-            <aside className="fixed w-[305px] left-0 bg-white h-full">
-                <div className="w-full max-w-sm mx-auto p-6 bg-white text-center ~">
+            <aside className="relative xl:fixed w-full main-rightbar mx-4 md:mx-[1px] xl:w-[305px] left-0 bg-white h-full">
+                <div className="w-full max-w-lg xl:max-w-sm mx-auto p-6 bg-white text-center ~">
                     {/* Profile Picture */}
                     <ProfileCard />
                     
@@ -65,19 +65,19 @@ const Header = ({ children }: HeaderProps) => {
                     <BreakLine width='270px'/>
 
                     {/* Download CV */}
-                    <Link href={profileDetail?.cv && profileDetail?.cv} download>
-                        <Button title="DOWNLOAD CV" icon={<DownloadSvg className='fill-[var(--color-black-dark)]' fill={`var(--color-black-dark)`} />} algin='right' />
+                    <Link className='flex justify-center' href={profileDetail?.cv && profileDetail?.cv} download>
+                        <Button title="DOWNLOAD CV" icon={<DownloadSvg className='text-left sm:text-center fill-[var(--color-black-dark)]' fill={`var(--color-black-dark)`} />} algin='right' />
                     </Link>
                 </div>
             </aside>
 
             {/* Main Content */}
-            <main className="relative left-[305px] flex-2 px-6 bg-gray-100" style={{ width: 'calc(100% - 415px)' }}>
+            <main className="relative xl:left-[305px] flex-2 mt-6 sm:mt-0 p-2 sm:px-6 bg-gray-100 main-responsive">
                 {children}
             </main>
 
             {/* Right Sidebar */}
-            <aside className="fixed w-[108px] right-0 bg-white h-full">
+            <aside className="flex fixed main-sidebar right-0 bg-white h-full">
                 <div className="h-full flex flex-col items-center pt-20 pb-4">
                     <nav className="w-full px-4 mt-6 flex flex-col items-center justify-center gap-5">
                         <RightMenu />

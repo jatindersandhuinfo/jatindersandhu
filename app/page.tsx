@@ -9,7 +9,7 @@ import Footer from "@/app/components/footer";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center sm:items-start gap-4">
+    <div className="flex flex-col items-center sm:items-start gap-4 p-2 sm:p-0">
       <BannerSection id="/" />
       <ServiceSection id="services" />
       <SkillSection id="skill" />

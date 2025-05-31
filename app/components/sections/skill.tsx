@@ -7,7 +7,7 @@ const WorkSection = ({ id }: { id: string }) => {
     return (
         <PageSection id={id} title={SkillMain?.title} desc={''}>
             <div className="flex flex-row flex-wrap justify-center items-center bg-[var(--color-white)] w-full">
-                <div className="flex flex-row flex-wrap justify-center items-center gap-6 max-w-6xl  p-10 ">
+                <div className="flex flex-row flex-wrap justify-center items-center gap-2 sm:gap-6 max-w-6xl py-10 px-4 sm:p-10 ">
                     {groupedExtraSkills.map(({ name, Icon, color }, idx) => (
                         <Skill key={idx} name={name} Icon={Icon} color={color} />
                     ))}

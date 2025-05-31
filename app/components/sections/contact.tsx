@@ -5,14 +5,15 @@ import PageSection from "@/app/components/common/pagesection";
 const Portfolio = ({ id }: { id: string }) => {
     return (
         <PageSection id={id} title="Contact information" desc="">
-            <div className="flex flex-col py-10 w-full justify-center items-center">
+            <div className="flex flex-col md:flex-row gap-3 py-10 w-full items-center">
                 <ContactCard items={items} />
-                <img
-                    src="/chd_map.png"
-                    alt="Chandigarh"
-                    className="w-full pt-10 h-[400px] object-cover"
-                />
+
             </div>
+            <img
+                src="/chd_map1.png"
+                alt="Chandigarh"
+                className="w-full pt-10 h-[600px] object-cover"
+            />
         </PageSection>
     );
 };

@@ -7,7 +7,7 @@ interface Props {
 
 const Filter = ({ setActiveFilter, activeFilter }: Props) => {
     return (
-        <div className="flex flex-row justify-center items-center mb-8">
+        <div className="flex flex-row flex-wrap justify-center items-center mb-8">
             {filters && filters.map((filter) => (
                 <button
                     key={filter}

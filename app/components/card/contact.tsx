@@ -7,7 +7,7 @@ interface Props {
 
 const ContactCardList = ({ items }: Props) => {
   return (
-    <div className="flex flex-row flex-wrap gap-6 justify-center max-w-2xl items-center mx-auto">
+    <div className="flex flex-row flex-wrap sm:flex-auto gap-6 justify-center items-center w-full">
       {items.map((item, index) => (
         <SingleContactCard key={index} items={item.items} />
       ))}
